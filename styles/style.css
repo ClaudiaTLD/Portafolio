@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #49c5b6;
+    --color-secundario: #fff;
+    --color-terciario: #F7B733;
+    --color-hover:#F7B733;
+
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+/*Arriba: valores y forma para resetear*/
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box; /*video 2 clase 2, curso: "html y css: clases, posicionamiento y flexbox"*/
+}
+
+.header{    
+    padding: 2% 0% 0% 15%;   
+}
+
+.header__menu {
+     display: flex;
+     justify-content: right;
+     margin-right: 10%;
+     align-items: center;
+ }
+
+.header__menu__link {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.header__menu__link:hover {
+    color: var(--color-terciario);
+}
+
+
+.presentacion{
+    display: flex; /*video 5 clase 2, curso: "html y css: clases, posicionamiento y flexbox"*/
+    align-items: center;
+    padding: 2% 15%;
+    justify-content: space-between;
+    gap: 90px;
+}
+   
+.presentacion__contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.presentacion__contenido__titulo {
+    font-family: var(--fuente-krona);
+    font-size: 2rem;
+}
+
+.titulo-destaque{
+    color: var(--color-terciario);
+}
+
+.parrafo-destaque{
+    color: var(--color-terciario);
+    font-size: 1.6rem;    
+}
+
+.presentacion__contenido__texto {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+.hover:hover{
+    color: #95ecffe7;
+}
+
+.presentacion__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlaces_subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+    
+}
+
+.presentacion__enlaces__link{
+    width: 50%;
+    text-align: center;    
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-family: var(--fuente-montserrat);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.presentacion__enlaces__link:hover{
+    background-color: var(--color-hover);
+}
+
+.presentacion__imagen{
+    width: 50%;
+}
+
+img{    
+    border-radius: 30px;
+    
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-secundario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400px;
+}
+
+
+/* ==============   CLASES CURRICULUM ====================
+
+.contenedor__section{
+    width: 600px;
+    line-height: 2;
+}
+
+.nombre{
+    font-size: 2.8rem;
+}
+
+.resaltar:hover{
+    color: var(--color-terciario);
+}
+
+.resaltar{
+    line-height: 4;
+}
+
+.trabajo{
+    line-height: 3;
+    text-decoration: underline;
+}
+
+/*.perfil_cv{
+    width: 250px;
+    display: flex;
+    justify-content: right;
+    border-radius: 10%;
+    margin-top: -500px;
+}*/    
+
+@media (max-width: 1200px){
+
+        .header{
+            padding: 4%;
+        }
+
+        .presentacion{
+            flex-direction: column-reverse;
+        }
+
+        .presentacion__contenido{
+            width: auto; /* o width: 100%; sería lo mismo*/
+        }
+
+}
+
+@media (max-width: 950px) {
+
+    .header__menu{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 780px){
+    .presentacion__contenido__titulo{
+        font-size: 1.5rem;
+    }
+
+    .presentacion__enlaces__link{
+        font-size: 1rem;
+    }
+
+    .presentacion__imagen{
+        width: 100%;
+    }
+
+}
